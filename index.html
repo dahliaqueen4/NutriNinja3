@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutri-Ninja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Nutri-Ninja</h1>
+        <div class="buttons">
+            <button id="setGoalButton" onclick="navigateToPage('setGoalPage')">Set Calorie Goal</button>
+            <button id="logMealButton" onclick="navigateToPage('logMealPage')">Log Meal</button>
+            <button id="dailyReportButton" onclick="navigateToPage('dailyReportPage')">Daily Report</button>
+            <button id="downloadDataButton" onclick="downloadData()">Download Data</button>
+        </div>
+        <div id="content">
+            <!-- Dynamic content will be loaded here -->
+            <canvas id="calorieTrendChart" style="max-width: 800px; margin: 20px auto;"></canvas>
+        </div>
+    </div>
+    <div class="confetti" id="confetti"></div>
+
+    <!-- Include Chart.js and the Annotation Plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@2.0.1/dist/chartjs-plugin-annotation.min.js"></script>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
