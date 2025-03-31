@@ -337,7 +337,7 @@ function renderCalorieTrendChart() {
     const report = document.getElementById('content');
     report.appendChild(ctx);
 
-    const labels = days.map((day, index) => `Day ${index + 1} (${day.date})`); // 🔥 Include date in labels
+    const labels = days.map((day, index) => `Day ${index + 1}`); // replaced old:   const labels = days.map((day, index) => `Day ${index + 1} (${day.date})`); 
     const data = days.map(day => day.totalCalories); // 🔥 Use total calories for each day
     const goalMet = data.map(calories => calories >= calorieGoal);
 
